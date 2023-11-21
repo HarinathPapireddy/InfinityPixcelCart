@@ -1,44 +1,32 @@
 # InfinityCart
+This is an robust E-Commerce application developed using Spring framework, Spring Boot, Maven, Hibernate, Spring Security And Redis
 
-This app was created with Bootify.io - tips on working with the code [can be found here](https://bootify.io/next-steps/).
-Feel free to contact us for further questions.
+## Features
+- User authentication and Autherization using Spring Security.
+- Product catalog with CRUD operations.
+- Shopping Cart functionality.
+- Order processing and management.
+- Resful API for integration with frontend application.
+- Redis caching improved performance.
 
-## Development
+## Prerequisites
+- Java 8 or later.
+- Maven.
+- MySql.
+- Redis.
+- Spring Security.
 
-Update your local database connection in `application.properties` or create your own `application-local.properties` file to override
-settings for development.
+## Configuration
+- Adjust application properties in 'src/main/resources/application.properties' for database connection, Redis Connection.
+- customize security settings in 'src/main/java/com/example/config/SecurityConfig.java'.
+- Configure JWT properties in 'application.properties' for token expiration and secret key.
 
-During development it is recommended to use the profile `local`. In IntelliJ `-Dspring.profiles.active=local` can be
-added in the VM options of the Run Configuration after enabling this property in "Modify options".
+## Database
+- This application uses hibernate and JPA for database operations.
+- Configure your database connection in 'application.properties'.
 
-Lombok must be supported by your IDE. For IntelliJ install the Lombok plugin and enable annotation processing -
-[learn more](https://bootify.io/next-steps/spring-boot-with-lombok.html).
 
-After starting the application it is accessible under `localhost:8080`.
-
-## Build
-
-The application can be built using the following command:
-
-```
-mvnw clean package
-```
-
-Start your application with the following command - here with the profile `production`:
-
-```
-java -Dspring.profiles.active=production -jar ./target/InfinityCart-0.0.1-SNAPSHOT.jar
-```
-
-If required, a Docker image can be created with the Spring Boot plugin. Add `SPRING_PROFILES_ACTIVE=production` as
-environment variable when running the container.
-
-```
-mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=io.bootify/infinity-cart
-```
-
-## Further readings
-
-* [Maven docs](https://maven.apache.org/guides/index.html)  
-* [Spring Boot reference](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)  
-* [Spring Data JPA reference](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)  
+## Security
+- User authentication and autherization are handles by Spring Security.
+- Also the authentication and autherization are handled by Jwt tokens.
+- Customize security properties in 'application.prperties'.
